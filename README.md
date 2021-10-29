@@ -1,6 +1,6 @@
 ## Download GTEx and TCGA Controlled RNA-Seq Data
 
-To access controlled data in GTEx and TCGA, one first shoukd apply for data access. More information how you can apply for data access can be found in this page: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login
+To access controlled data in GTEx and TCGA, one first should apply for data access. More information how you can apply for data access can be found in this page: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login
 
 The following steps assumes that you already have access to both databases and you want to download them into your server.
 
