@@ -1,11 +1,12 @@
-#Download GTEx and TCGA Controlled RNA-Seq Data
-To access controlled data in GTEx and TCGA, you first need to apply for data access.
-More information how you can apply for data access can be found here: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login
+## Download GTEx and TCGA Controlled RNA-Seq Data
+
+To access controlled data in GTEx and TCGA, one first shoukd apply for data access. More information how you can apply for data access can be found in this page: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login
+
 The following steps assumes that you already have access to both databases and you want to download them into your server.
 
 ## GTEx
 GTEx data are stored on the database of Genotypes and Phenotypes (dbGaP)
-### Download SRA and BAM Files from RNA-Seq controlled data via DBGaP
+### Download SRA and BAM RNA-Seq controlled data via DBGaP
 ### Steps
 1. Login into your account (https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login).
 2. Choose 'My Project' under 'Authorized Access Button'.
@@ -21,6 +22,7 @@ GTEx data are stored on the database of Genotypes and Phenotypes (dbGaP)
 - User's Guide: https://www.ncbi.nlm.nih.gov/sra/docs/sra-dbgap-download/
 
 9. Command lines to download the data
+
 9.1 Take SRR ids from Metadata file
 less -S SraRunTable.txt | sed 's/,/ /g' | awk '{print $1}' | less > SRR_Acc_List.txt
 
