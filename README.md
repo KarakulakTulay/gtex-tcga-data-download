@@ -32,7 +32,7 @@ for srr in $(cat SRR_Acc_List.txt); do sratoolkit.2.11.2-ubuntu64/bin/prefetch -
 This command will download the sra files.
 
 9.3 Convert SRA data into fastq files & compress them\
-for srr in $(cat SRR_Acc_List.txt); do cd $srr; sratoolkit.2.11.2-ubuntu64/bin/fasterq-dump *.sra -e 8 --ngc prj.ngc; gzip *fastq; cd ..; done >& out_conversion.txt &
+for srr in $(cat SRR_Acc_List.txt); do cd $srr; sratoolkit.2.11.2-ubuntu64/bin/fasterq-dump *.sra -e 8 --ngc prj.ngc; gzip *fastq; cd ..; done >& out_conversion.txt &\
 This command will generate two fastq files if the run is paired-end. Otherwise one fastq file will be generated.
 
 ## TCGA
