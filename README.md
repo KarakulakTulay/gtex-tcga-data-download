@@ -1,11 +1,12 @@
 ## Download GTEx and TCGA Controlled RNA-Seq Data
 
-To access controlled data in GTEx and TCGA, one first should apply for data access. More information how you can apply for data access can be found in this page: https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login
+To access controlled data in GTEx and TCGA, one first should apply for data access. More information how you can apply for data access can be found [here](https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login).
 
 The following steps assumes that you already have access to both databases and you want to download them into your server.
 
 ## GTEx
-GTEx data are stored on the database of Genotypes and Phenotypes (dbGaP)
+GTEx data are stored on the database of Genotypes and Phenotypes ([dbGaP](http://dbgap.ncbi.nlm.nih.gov)).
+
 ### Download SRA and BAM RNA-Seq controlled data via DBGaP
 ### Steps
 1. Login into your account (https://dbgap.ncbi.nlm.nih.gov/aa/wga.cgi?page=login).
@@ -35,7 +36,7 @@ for srr in $(cat SRR_Acc_List.txt); do cd $srr; sratoolkit.2.11.2-ubuntu64/bin/f
 This command will generate two fastq files if the run is paired-end. Otherwise one fastq file will be generated.
 
 ## TCGA
-TCGA data are stored on the Genomic Data Common Data Portal (GDC Data Portal).
+TCGA data are stored on the Genomic Data Common Data Portal ([GDC Data Portal](https://portal.gdc.cancer.gov)).
 Documentation on how to download and upload data: https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Preparing_for_Data_Download_and_Upload/
 
 ### Steps
