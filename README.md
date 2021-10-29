@@ -24,14 +24,14 @@ GTEx data are stored on the database of Genotypes and Phenotypes ([dbGaP](http:/
 
 9. Command lines to download the data
 
-9.1 Take SRR ids from Metadata file
+9.1 Take SRR ids from Metadata file\
 less -S SraRunTable.txt | sed 's/,/ /g' | awk '{print $1}' | less > SRR_Acc_List.txt
 
-9.2 Fetch the data from dbGaP
+9.2 Fetch the data from dbGaP\
 for srr in $(cat SRR_Acc_List.txt); do sratoolkit.2.11.2-ubuntu64/bin/prefetch --max-size 24G --ngc prj.ngc $srr; done >& out.txt &
 This command will download the sra files.
 
-9.3 Convert SRA data into fastq files & compress them
+9.3 Convert SRA data into fastq files & compress them\
 for srr in $(cat SRR_Acc_List.txt); do cd $srr; sratoolkit.2.11.2-ubuntu64/bin/fasterq-dump *.sra -e 8 --ngc prj.ngc; gzip *fastq; cd ..; done >& out_conversion.txt &
 This command will generate two fastq files if the run is paired-end. Otherwise one fastq file will be generated.
 
@@ -51,7 +51,7 @@ Documentation on how to download and upload data: https://docs.gdc.cancer.gov/Da
 9. Download GDC Data Transfer Tool
 - Download Page for GDC-Data-Transfer-Tool: https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
 - User's Guide: https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Getting_Started/
-10. Command Line to download bam Files
-gdc-client download -m manifest_file -t tokenfile
-token_file: see step 2
+10. Command Line to download bam Files\
+gdc-client download -m manifest_file -t tokenfile\
+token_file: see step 2\
 manifest_file: see step step 8
